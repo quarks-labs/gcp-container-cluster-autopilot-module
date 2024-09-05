@@ -13,6 +13,7 @@ resource "google_container_cluster" "this" {
   enable_l4_ilb_subsetting = try(var.enable_l4_ilb_subsetting, false)
   enable_autopilot         = try(var.enable_autopilot, true)
   deletion_protection      = try(var.deletion_protection, false)
+  initial_node_count       = try(var.initial_node_count, 1)
 
   master_auth {
     client_certificate_config {
