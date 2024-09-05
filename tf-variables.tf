@@ -3,6 +3,11 @@ variable "region" {
   description = "GCP Region"
 }
 
+variable "initial_node_count" {
+  type = number
+  description = "Initial node Pool"
+}
+
 variable "name" {
   type        = string
   description = "Name of GCP Network"
